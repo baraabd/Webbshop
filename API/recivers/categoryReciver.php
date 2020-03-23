@@ -1,10 +1,12 @@
 <?php
+session_start();
 include("./../handlers/categoryHandler.php");
 try {
 
     if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         $result = getAllCategories();
         echo json_encode($result);
+        
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         error_log("POST");
         if ($_POST["entity"] == "enjoy") {
