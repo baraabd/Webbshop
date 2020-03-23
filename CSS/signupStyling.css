@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #001F3F;
+    box-shadow: 100px 2px 20px 10px rgb(94, 96, 97) inset;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    padding-top: 15px;
+    top: 10px;
+    color: #FFF;
+    height: 100vw;
+}
+
+.topnav {
+    background-color: #00389d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    padding: 25px;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    height: 30px;
+    width: 100%;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Bowlby One SC', cursive;
+    color: #FFF;
+}
+
+#counter {
+    margin: 0;
+    margin-right: 5px;
+    color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cartIcon {
+    margin-right: 10px;
+}
+
+.aIcon {
+    font-size: 24px;
+}
+
+.userIcon {
+    margin-right: 10px;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+#authentication {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    margin: 0;
+    color: black;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.button {
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: fantasy;
+    background-color: greenyellow;
+}
+
+.signUpForm {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 1px 1px #888888;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 1;
+}
+
+#titleSignUp {
+    padding-top: 1em;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #FFF;
+    margin-right: 30px;
+}
+
+.userFirstNlabel,
+.userFirstNInput,
+.userLastNlabel,
+.userLastNInput,
+.userEmaillabel,
+.userPwdlabel,
+.userPwdInput {
+    border: none;
+    padding: 5px 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.userEmailInput {
+    border: none;
+    padding: 5px 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.userSignup {
+    border: none;
+    color: white;
+    padding: 5px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#crossReg {
+    top: 1px;
+    right: 1px;
+    float: right;
+    color: #FFF;
+}
+
+#signUpSubmit {
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: fantasy;
+    background-color: cyan;
+    margin: 4px 2px;
+    padding: 2px 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .signUpForm {
+        width: 300px;
+        padding: 20px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 1px 1px 1px 1px #888888;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+        z-index: 1;
+    }
+    main {
+        height: 100vh;
+    }
+}
