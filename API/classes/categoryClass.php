@@ -46,7 +46,13 @@ class Category {
         $value = array(":CategoryName"=>$this->CategoryName,":CategoryID"=>$this->CategoryId);
         $result =$this->db->runQuery($query, $value);
         return $result;
-    }        
+    }     
+    
+    
+    public function flexFunction($flexQuery, $flexArray = null) {
+        return $this->db->runQuery($flexQuery, $flexArray);
+    }
+    
 }
 
 ?>
