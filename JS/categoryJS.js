@@ -4,10 +4,8 @@ import { getPS4Products } from "./productJS.js"
 import { getPCProducts } from "./productJS.js"
 
 export function getCategories() {
-    let myData = new FormData();
-    myData.append("entity", "enjoy");
-    myData.append("endpoint", "getAllCategory");
-    makeRequest("../API/recivers/categoryReciver.php", "POST", myData, (result) => {
+
+    makeRequest("../API/recivers/categoryReciver.php", "GET", null, (result) => {
 
         var catDiv = document.getElementById("categories")
 
