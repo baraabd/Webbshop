@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/c9b461b663.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="./JS/cartJS.js"></script>
+    <script defer type="module" src="./JS/mainJS.js"></script>
+    <link rel="stylesheet" href="./CSS/cartStyling.css">
+</head>
+
+<body>
+    <header class="topnav">
+        <a href="./start.html">
+            <h1 class="title">Enjoy</h1>
+        </a>
+
+        <div class="cartBox">
+            <a class="cartIcon" href="./Cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <p id="counter"></p>
+        </div>
+        <div class="userIcon"><a href="./mypages.html"><i class="fas fa-users"></i></a></div>
+        <button id="signOut">Log Out</button>
+
+        </div>
+    </header>
+    <main>
+        <div id="cartProducts"></div>
+        <div id="checkBox">
+            <select id="shipper">
+                <option value="1">DHL</option>
+                <option value="2">Post</option>
+                <option value="3">Online</option>
+            </select>
+            <button id="checkout">Checkout</button>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div>
+            <h2 class="SubScribe">Subscribe Newsletter</h2>
+            <input type="text" placeholder="firstname" name="firstname">
+            <input type="text" placeholder="lastname" name="lastname">
+            <input type="text" placeholder="email" name="email">
+            <button id="newsbtn" class="button">Submit</button>
+        </div>
+     
+    </footer>  
+</body>
+
+</html>
+
+</html>
