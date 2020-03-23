@@ -61,13 +61,7 @@ class Order {
         return $result;
     }
     
-    public function delete() {
-        $query = "DELETE FROM orders WHERE OrderID = :OrderID;";
-        $value = array(":OrderID"=>$this->OrderID);
-        $result =$this->db->runQuery($query);
-        return $result;
-    }
-
+    
     public function flexFunction($flexQuery, $flexArray = null) {
         return $this->db->runQuery($flexQuery, $flexArray);
     }

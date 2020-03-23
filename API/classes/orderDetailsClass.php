@@ -1,5 +1,5 @@
 <?php
-require_once("../classes/dbClass.php");
+require_once("./../classes/dbClass.php");
 
 
 class OrderDetails {
@@ -18,6 +18,12 @@ class OrderDetails {
     }
 
     
+    public function fetchAll() {
+        $query = "SELECT * FROM order_details;";
+        $result = $this->db->runQuery($query);
+        return $result;
+    }
+
     public function fetchOne() {         
         $query = "SELECT * FROM order_details  WHERE OrderID = :OrderID;";
         $value = array(":OrderID"=>$this->OrderID);        
@@ -26,18 +32,7 @@ class OrderDetails {
 
     }
 
-    public function getOneOrderDetails() {   
-        error_log("class function IN");       
-        $query = "SELECT * FROM order_details  WHERE OrderID = :OrderID;";
-        error_log($query); 
-        $value = array(":OrderID"=>$this->OrderID);  
-        error_log("Value Efter");       
-        $result =$this->db->runQuery($query, $value);    
-        error_log("result Efter");                
-        return $result;
-
-    }
-
+    
     public function insert() {
         $query = "INSERT INTO order_details (OrderID, ProductID, Quantity, UnitPrice)
         VALUES(:OrderID, :ProductID, :Quantity, :UnitPrice);";
@@ -48,6 +43,7 @@ class OrderDetails {
         $result =$this->db->runQuery($query, $value);
         return $result;
     }
+
     public function update() {         
         $query = "UPDATE order_details SET OrderID = :OrderID, ProductID = :ProductID, Quantity = :Quantity, UnitPrice = :UnitPrice
         WHERE OrderID = :OrderID;";
@@ -58,12 +54,7 @@ class OrderDetails {
         $result =$this->db->runQuery($query, $value);
         return $result;
     }
-    public function delete() {
-        $query = "DELETE FROM order_details WHERE OrderID = :OrderID;";
-        $value = array(":OrderID"=>$this->OrderID);
-        $result =$this->db->runQuery($query);
-        return $result;
-    }
+    
     public function flexFunction($flexQuery, $flexArray = null) {
         return $this->db->runQuery($flexQuery, $flexArray);
     }

@@ -24,7 +24,16 @@ try {
                     } else {
                         echo json_encode("Need to login to do this");
                     }
-
+                
+                } else if($_POST["endpoint"] == "getOrdersToMyPages") {
+                    $result = getOrdersToMyPages($_POST["inloggedUserId"]);
+                    echo json_encode($result);
+                    
+                } else if ($_POST["endpoint"] == "theOrderIsReceived") {
+                    $result = setThisAsReceived(
+                        $_POST['theReceivedOrderId']);
+                    echo json_encode($result);
+                
                 } else if ($_POST["endpoint"] == "getAllorderShiped") {
                     $result = getAllOrderShiped();
                     echo json_encode($result);

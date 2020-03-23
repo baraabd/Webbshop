@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("../handlers/orderDetailsHandler.php");
+require_once("./../handlers/orderDetailsHandler.php");
 try {
        
     if($_SERVER['REQUEST_METHOD'] === 'POST') {          
