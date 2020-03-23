@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    /* justify-content: space-between; */
+    width: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    flex: 1;
+    background: #001F3F;
+    box-shadow: rgb(94, 96, 97) 100px 2px 20px 10px inset;
+    padding: 0 1.5em;
+    padding-top: 95px;
+    padding-bottom: 20px;
+    top: 80px;
+    color: #FFF;
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00389d;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    z-index: 1;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    color: #FFF;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Bowlby One SC', cursive;
+    color: #FFF;
+}
+
+.cartBox {
+    display: flex;
+}
+
+#counter {
+    background-color: white;
+    border-radius: 30px;
+    width: 1.2em;
+    height: 1.2em;
+    text-align: center;
+    color: #001F3F;
+    margin: 0;
+    margin-left: 3px;
+}
+
+.cartIcon {
+    display: flex;
+    font-size: 24px;
+}
+
+.userIcon {
+    margin-right: 10px;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+#authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    flex-wrap: wrap;
+}
+
+a {
+    margin: 0;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.button {
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: fantasy;
+    background-color: cyan;
+}
+
+#signOut {
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: fantasy;
+    background-color: cyan;
+    margin: 4px 2px;
+    padding: 2px 10px;
+}
+
+#cartProducts {
+    width: 90vw;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.productBox {
+    color: #FFF;
+    font-family: monospace;
+    padding-left: 8em;
+    font-weight: bold;
+}
+
+.productPic {
+    height: 7em;
+    object-fit: contain;
+}
+
+#checkBox {
+    height: 10vh;
+    text-align: start;
+    padding-left: 8em;
+}
+
+.shipContainer {
+    padding-top: 10em;
+    font-family: monospace;
+}
+
+.totalText {
+    font-family: monospace;
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 7px;
+    padding-bottom: 1em;
+}
+
+.buyText {
+    font-size: 3em;
+    font-family: monospace;
+    padding-left: 15px;
+}
+
+.footer {
+    background-color: #00389d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    font-family: cursive;
+    color: #FFF;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .topnav {
+        height: 100px;
+    }
+    #authentication {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+    main {
+        min-height: 100vh;
+    }
+    .totalText {
+        padding-left: 0;
+    }
+    #signOut {
+        padding: 1px 5px;
+    }
+    .userIcon {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .topnav {
+        height: 100px;
+    }
+    #authentication {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+    #cartProducts {
+        display: inline;
+    }
+    .productBox {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #checkBox {
+        height: 10vh;
+    }
+}
