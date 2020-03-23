@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../handlers/userHandler.php");
+include("./../handlers/userHandler.php");
 try {
     if ($_SERVER["REQUEST_METHOD"] =='GET') {
         if (!isset($_SESSION['inloggedUser'])) {

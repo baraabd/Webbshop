@@ -1,5 +1,5 @@
 <?php
-include("../classes/dbClass.php");
+include(realpath(dirname(__FILE__)."/dbClass.php"));
 
   class User {
     public $userId;
@@ -63,19 +63,10 @@ include("../classes/dbClass.php");
         return $result;        
     }
 
-
-    
-    public function delete() {
-        $query = "DELETE FROM users WHERE userId = :userId;";
-        $value = array(":userId"=>$this->userId);
-        $result =$this->db->runQuery($query);
-        return $result;
-    }
     
     public function flexFunction($flexQuery, $flexArray = null) {
         return $this->db->runQuery($flexQuery, $flexArray);
     }
-
 
 }
 

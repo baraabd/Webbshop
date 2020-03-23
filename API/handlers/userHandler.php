@@ -1,7 +1,7 @@
 <?php
 
-
-include("../classes/userClass.php");
+session_start();
+include("./../classes/userClass.php");
 
 function signUpSubmit($firstname, $lastname, $email, $password, $role)
 {
@@ -24,6 +24,7 @@ function getUsers()
     return $user->fetchAll();
     
 };
+
 function loginUser($email, $password) {
     $user = new User();
     $allUsers = $user->fetchAll();
@@ -32,7 +33,7 @@ function loginUser($email, $password) {
             if (password_verify($password, $allUsers[$i]["Password"])) {
                 $_SESSION["inloggedUser"] = $allUsers[$i]["FirstName"];
                 $_SESSION["inloggedUserID"] = $allUsers[$i]["UserID"];
-                return array("success" => true, "userName" => "welcome ".$allUsers[$i]["FirstName"]);
+                return array("success" => true, "userName" => "welcome ".$allUsers[$i]["FirstName"], "inloggedUserId" => $allUsers[$i]["UserID"]);
             }
         }
     };
