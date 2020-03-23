@@ -1,0 +1,680 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    body {
+        background: url(../images/adminBackground.jpg);
+        background-size: cover;
+    }
+    
+    .logo {
+        font-size: 2em;
+        margin-left: 20px;
+        color: #fff;
+        font-weight: bold;
+        margin-top: 4px;
+        width: 20%;
+    }
+    
+    #adminName {
+        width: 70%;
+        text-align: end;
+        color: #fff;
+        margin-top: 15px;
+    }
+    
+    #logout {
+        width: 10%;
+        text-align: center;
+        color: #fff;
+        margin-top: 0px;
+        margin-left: 0;
+        font-size: 2.5em;
+        cursor: pointer;
+    }
+    
+    #logout:hover {
+        color: rgb(255, 0, 0);
+    }
+    
+    header {
+        width: 98%;
+        height: 50px;
+        margin: 1%;
+        background-color: #3734d1;
+        border-radius: 5px;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .bodyLeft {
+        width: auto;
+        margin-left: 10px;
+        border-radius: 3px;
+        padding-top: 0px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    element.style {
+        font-size: 14px;
+        margin-left: 20px;
+        width: 30%;
+    }
+    
+    .categoriesContainer:hover {
+        color: #3734d1;
+    }
+    
+    .productsContainer:hover {
+        color: #3734d1;
+    }
+    
+    .ordersContainer:hover {
+        color: #3734d1;
+    }
+    
+    .usersContainer:hover {
+        color: #3734d1;
+    }
+    
+    .mangeAdminContainer:hover {
+        color: #3734d1;
+    }
+    
+    .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    
+    .dashBoard {
+        background-color: #3734d1;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .subContainerHideShow {
+        display: none;
+    }
+    
+    .add {
+        padding: 5px;
+        padding-left: 10px;
+        margin: 5px;
+        border-bottom: 1px solid #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .add:hover {
+        border-bottom: 1px solid rgb(0, 140, 255);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .delUpp {
+        padding: 5px;
+        padding-left: 10px;
+        margin: 5px;
+        border-bottom: 1px solid #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .delUpp:hover {
+        border-bottom: 1px solid rgb(0, 140, 255);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .mainContainer {
+        display: flex;
+        width: 100%;
+        margin-top: 80px;
+    }
+    
+    #bdcCatAdd {
+        background-color: aqua;
+        width: 98%;
+        margin: 10px;
+        padding: 10px;
+        display: none;
+    }
+    
+    #bdcCatAdd {
+        background-color: aqua;
+        width: 98%;
+        margin: 10px;
+        padding: 10px;
+        display: none;
+    }
+    
+    #bdcCatAdd {
+        background-color: aqua;
+        width: 98%;
+        margin: 10px;
+        padding: 10px;
+        display: none;
+    }
+    
+    .bodyRight {
+        width: 84.5%;
+        background-color: #cccccc;
+        margin: 10px;
+        border-radius: 5px;
+        opacity: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .message {
+        width: 95%;
+        height: 30px;
+        padding-top: 3px;
+        margin: 0 auto;
+        margin-top: 10px;
+        color: #3734d1;
+        font-weight: bold;
+        text-align: center;
+        background-color: silver;
+        border-radius: 5px;
+        display: none;
+    }
+    
+    .bodyRightContainer {
+        width: 95%;
+        padding-top: 3px;
+        margin: 0 auto;
+        margin-top: 10px;
+        color: #3734d1;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bdc {
+        width: 98%;
+        margin: 10px;
+        margin-top: 0px;
+        color: #000000;
+        border-radius: 5px;
+        display: flex;
+        /*background-color: sienna;*/
+        font-size: 3em;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    
+    .addText {
+        border-bottom: 1px solid #000000;
+        width: 98%;
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 10px;
+        height: 40px;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .leftContainer {
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+        margin: 5px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .rightContainer {
+        width: 50%;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .divContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .CoverPicture {
+        background-color: antiquewhite;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    
+    .PNGPicture {
+        background-color: antiquewhite;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    
+    .imgContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .columnContainer {
+        width: 98%;
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 10px;
+        margin: 5px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .columnContainerD {
+        width: 98%;
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 10px;
+        margin: 5px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .row {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .column {
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .label-left {
+        margin-bottom: 3px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    
+    input {
+        font-size: 12px;
+        color: Navy;
+        border-radius: 20px;
+        padding-left: 10px;
+        border: 1px solid rgb(124, 124, 124);
+        padding: 7px;
+        width: 100%;
+    }
+    
+    select {
+        height: 30px;
+        font-size: 16px;
+        color: Navy;
+        border-radius: 20px;
+        padding-left: 10px;
+        border: 1px solid rgb(124, 124, 124);
+        width: 100%;
+    }
+    
+    .columnMainTextD {
+        color: rgb(0, 0, 0);
+        padding-left: 10px;
+        text-align: center;
+    }
+    
+    .CategoryIDT,
+    .CategoryNameT,
+    .UpdateT,
+    .DeleteT {
+        width: 25%;
+    }
+    
+    .ColumnSubText.CategoryID,
+    .ColumnSubText.CategoryName,
+    .Update.UpdateCategoryBtn,
+    .deleteCategoryBtn.Delete,
+    .CategoryIDCategory {
+        width: 25%;
+    }
+    
+    .updateLabel {
+        font-size: 14px;
+        margin-left: 20px;
+        width: 35%;
+    }
+    
+    .ProductID,
+    .CategoryID,
+    .Price,
+    .UnitInStock,
+    .update,
+    .delete {
+        width: 10%;
+    }
+    
+    .Delete {
+        color: red;
+        cursor: pointer;
+    }
+    
+    .update {
+        color: darkgreen;
+        cursor: pointer;
+    }
+    
+    .ColumnSubText.CategoryID,
+    .cmtProductID,
+    .cmtCategoryID,
+    .cmtUnitInStock,
+    .cmtUpdate,
+    .cmtDelete,
+    .cmtPrice {
+        width: 10%;
+    }
+    
+    .ProductName,
+    .columnMainText.cmtProductName {
+        width: 40%;
+    }
+    
+    .ColumnSubText.OrderID,
+    .columnMainText.UserIDOrders,
+    .columnMainText.Shipped,
+    .ColumnSubText.OrderID,
+    .UserID,
+    .ColumnSubText.Shipped,
+    .columnMainText.OrderID,
+    .columnMainText.UserIDNewsletters {
+        width: 10%;
+    }
+    
+    .columnMainText.columnMainTextD.QuantityT,
+    .columnMainText.columnMainTextD.ProductIDT,
+    .columnMainText.columnMainTextD.UnitPriceT,
+    .ColumnSubTextD.ProductIDORderDetails,
+    .ColumnSubTextD.Quantity,
+    .ColumnSubTextD.UnitPrice,
+    .columnMainText.NewsletterID,
+    .ColumnSubText.NewsletterID,
+    .columnMainText.FirstName,
+    .ColumnSubText.FirstName,
+    .columnMainText.LastName,
+    .ColumnSubText.LastName {
+        width: 20%;
+    }
+    
+    .columnMainText.OrderDate,
+    .ColumnSubText.OrderDate,
+    .columnMainText.Email,
+    .ColumnSubText.Email {
+        width: 30%;
+    }
+    
+    .ColumnSubText.ShipperID,
+    .columnMainText.Recieved,
+    .ColumnSubText.Recieved,
+    .columnMainText.ShipperID {
+        width: 12%;
+    }
+    
+    .columnMainText.Send,
+    .columnMainText.Show,
+    .SendOrderBtn.update,
+    .showOrderDetailsBtn.Delete {
+        width: 8%;
+    }
+    
+    input[type="text"].unitInStockText {
+        width: 10%;
+        display: none;
+    }
+    
+    .editProductContainer {
+        display: flex;
+        align-items: baseline;
+        width: 97%;
+    }
+    
+    input.editProductText {
+        width: 70%;
+    }
+    
+    .ColumnSubTextcolumnMainTextCategoryID,
+    .columnMainTextCategoryName {
+        width: 30%;
+    }
+    
+    .columnMainTextCategoryName {
+        width: 30%;
+    }
+    
+    .Update {
+        color: darkgreen;
+        cursor: pointer;
+        width: 20%;
+    }
+    
+    .inputContainer {
+        margin-top: 10px;
+    }
+    
+    .columnSub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: cornsilk;
+        width: 100%;
+        margin-bottom: 1px;
+        font-size: 12px;
+    }
+    
+    .columnSub:hover {
+        background-color: rgb(194, 188, 166);
+    }
+    
+    .columnSubD {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: cornsilk;
+        margin-bottom: 1px;
+    }
+    
+    .columnSubD:hover {
+        background-color: rgb(194, 188, 166);
+    }
+    
+    .Update {
+        color: darkgreen;
+        cursor: pointer;
+    }
+    
+    .show {
+        color: red;
+        cursor: pointer;
+    }
+    
+    .columnMain {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+    
+    input:hover {
+        background-color: rgb(187, 187, 251);
+    }
+    
+    #button {
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+        background-color: mediumturquoise;
+        border: none;
+        padding: 5px;
+    }
+    
+    #buttonAdd {
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+        background-color: rgb(121, 121, 121);
+        border: none;
+        padding: 5px;
+    }
+    
+    #buttonAdd:hover {
+        color: #9e9e9e;
+        background-color: rgb(47, 47, 47);
+    }
+    
+    #button:hover {
+        background-color: rgb(0, 119, 115);
+        color: #fff;
+    }
+    
+    @media screen and (max-width:500px) {
+        .bodyLeft {
+            width: 95%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 10px;
+        }
+        .bodyRight {
+            width: 95%;
+        }
+        .mainContainer {
+            display: flex;
+            width: 100%;
+            margin-top: 80px;
+            flex-direction: column;
+        }
+    }
+    
+    @media screen and (max-width:500px) {
+        .columnContainer {
+            font-size: 10px;
+        }
+        .addText {
+            font-size: 14px;
+        }
+        .logo {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        #adminName {
+            font-size: 1em;
+        }
+        #logout {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        input.editProductText {
+            font-size: 12px;
+            height: 20px;
+            text-align: center;
+        }
+        .label-left {
+            font-size: 12px;
+        }
+        input {
+            font-size: 12px;
+        }
+        #button {
+            width: 150px;
+            font-size: 12px;
+        }
+        .message {
+            font-size: 14px;
+        }
+    }
+    
+    .MainContainer {
+        font-size: 18px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .iconsContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        margin-bottom: 20px;
+        height: 150px;
+        width: 30%;
+    }
+    
+    .informationContainer {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .rowContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: deepskyblue;
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .viewMore {
+        text-align: center;
+        font-size: 16px;
+        background-color: lightblue;
+        cursor: pointer;
+    }
+    
+    .numberOf {
+        color: white;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+    
+    .totalText {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .iconDashBord {
+        font-size: 3em;
+        padding: 15px;
+        padding-top: 40px;
+        text-align: end;
+        height: 150px;
+        width: 50%;
+    }

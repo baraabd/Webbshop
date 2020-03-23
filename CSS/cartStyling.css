@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    flex: 1;
+    background: #001F3F;
+    box-shadow: rgb(94, 96, 97) 100px 2px 20px 10px inset;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    padding-top: 95px;
+    padding-bottom: 20px;
+    top: 80px;
+}
+
+.topnav {
+    background-color: #00389d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    padding: 40px;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Bowlby One SC', cursive;
+    color: #FFF;
+}
+
+#counter {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin-top: -30px;
+    margin-right: -30px;
+    background-color: white;
+    border-radius: 30px;
+    width: 1.2em;
+    top: 18px;
+    text-align: center;
+    color: #001F3F;
+}
+
+.cartIcon {
+    display: flex;
+    margin-right: 10px;
+    font-size: 24px;
+    top: 11px;
+}
+
+.userIcon {
+    margin-right: 10px;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+#authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    flex-wrap: wrap;
+}
+
+a {
+    margin: 0;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.button {
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: fantasy;
+    background-color: cyan;
+}
+
+#cartProducts {
+    width: 100vw;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.productBox {
+    color: black;
+    font-family: monospace;
+    padding-left: 8em;
+}
+
+.productPic {
+    height: 7em;
+    object-fit: contain;
+}
+
+#checkBox {
+    width: 100vw;
+    height: 30vh;
+    text-align: start;
+    padding-left: 8em;
+}
+
+.shipContainer {
+    padding-top: 10em;
+    font-family: monospace;
+}
+
+.totalText {
+    font-family: monospace;
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 7px;
+    padding-bottom: 1em;
+}
+
+.buyText {
+    font-size: 4em;
+    font-family: monospace;
+    padding-left: 15px;
+}
+
+.footer {
+    background-color: #00389d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    font-family: cursive;
+    color: #FFF;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .topnav {
+        height: 100px;
+    }
+    #authentication {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .topnav {
+        height: 100px;
+    }
+    #authentication {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+}

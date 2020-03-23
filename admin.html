@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/77e9819b86.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/adminStyling.css">
+    <script defer type="module" src="./JS/app.js"></script>
+    <script defer type="module" src="./JS/mainJS.js"></script>
+    <title>Admin interface</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">ENJOY</div>
+        <div id="adminName">Bara Abdullatif</div>
+        <div id="logout"><i class="fas fa-sign-out-alt"></i></div>
+    </header>
+
+    <main>
+        <div class="mainContainer">
+
+            <div class="bodyLeft">
+                <div class="dashBoard container">DASH BOARD </div>
+
+                <div class="categoriesContainer container">CATEGORIE</div>
+
+                <div class="categorySubContainer subContainerHideShow">
+                    <div class="catAdd add">Add</div>
+                    <div class="catDelUpd delUpp">Delete/Update</div>
+                </div>
+
+                <div class="productsContainer container">PRODUCT</div>
+                <div class="productSubContainer subContainerHideShow">
+                    <div class="proAdd add">Add</div>
+                    <div class="proDelUpp delUpp">Delete/Update</div>
+                </div>
+
+                <div class="ordersContainer container">ORDER</div>
+                <div class="orderSubContainer subContainerHideShow">
+                    <div class="ordSend add">Show Orders</div>
+                </div>
+                <div class="usersContainer container">NEWS LETTERS</div>
+                <div class="usersSubContainer subContainerHideShow">
+                    <div class="usersAdd add">Show</div>
+                </div>
+
+                <div class="mangeAdminContainer container">MANGE ADMIN</div>
+                <div class="mangeAdminSubContainer subContainerHideShow">
+                    <div class="mangeAdminAdd add">Active Admin</div>
+                </div>
+
+            </div>
+
+            <div class="bodyRight">
+                <div class="message" id="message">The category was added successfully</div>
+                <div class="bodyRightContainer">
+
+                    <div class="bdcDashBord bdc">
+
+                        <div class="MainContainer">
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfLessProducts">41</div>
+                                        <div class="totalText">Total Products less 10</div>
+                                    </div>
+
+                                    <div class="iconDashBord"><i class="fas fa-shopping-cart"></i></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfProducts">41</div>
+                                        <div class="totalText">Total Products</div>
+                                    </div>
+
+                                    <div class="iconDashBord"><i class="fas fa-shopping-cart"></i></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfCategory">41</div>
+                                        <div class="totalText">Total Category</div>
+                                    </div>
+
+                                    <div class="iconDashBord"><i class="fas fa-list"></i></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfOrderShipped">41</div>
+                                        <div class="totalText">Total Order Shipped</div>
+                                    </div>
+
+                                    <div class="iconDashBord"> <i class="fas fa-paper-plane"></i></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfOrderPending">41</div>
+                                        <div class="totalText">Total Order Pending</div>
+                                    </div>
+
+                                    <div class="iconDashBord"><i class="far fa-clock"></i></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="iconsContainer">
+                                <div class="rowContainer">
+                                    <div class="informationContainer">
+                                        <div class="numberOf" id="numberOfUserWantAdmin">41</div>
+                                        <div class="totalText">Total User want Admin</div>
+                                    </div>
+
+                                    <div class="iconDashBord"><i class="fas fa-user-cog"></i></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bdcCatAdd bdc">
+                        <div class="addText" id="addText">Add Category</div>
+                        <div class="inputContainer">
+
+                            <div class="row">
+                                <div class="label-left">Category Name</div>
+                                <input name="CategoryName" type="text" id="CategoryName" tabindex="1" placeholder="Category Name">
+                            </div>
+
+                            <div class="rowButton">
+                                <input name="adminCategory" type="button" id="button" class="AddAdminCategory" tabindex="2" value="Add Category">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bdcCatDelUpp bdc">
+                        <div class="addText">Update/Delete Category</div>
+                        <div class="columnContainer">
+                            <div class="columnMain">
+                                <div class="CategoryIDT">Category ID</div>
+                                <div class="CategoryNameT">Category Name</div>
+                                <div class="UpdateT">Update</div>
+                                <div class="DeleteT">Delete</div>
+                            </div>
+                        </div>
+                        <div class="editProductContainer">
+                            <div class="updateLabel">Update Category Name</div>
+                            <input type="text" name="categoryNameText" value="" class="editProductText">
+                        </div>
+                    </div>
+
+                    <div class="bdcProAdd bdc">
+                        <div class="addText">Add Product</div>
+                        <div class="divContainer">
+                            <div class="leftContainer">
+
+                                <div class="row">
+                                    <div class="label-left">Category Name</div>
+                                    <select name="CategoryName" class="CategoryNameChoice" tabindex="1">                                        
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label-left">Product Name</div>
+                                    <input name="ProductName" type="text" id="ProductName" tabindex="2" placeholder="Category Name">
+                                </div>
+
+                                <div class="row">
+                                    <div class="label-left">Unit In Stock</div>
+                                    <input name="UnitInStock" type="text" id="UnitInStock" tabindex="3" placeholder="Unit In Stock">
+                                </div>
+
+                                <div class="row">
+                                    <div class="label-left">Price</div>
+                                    <input name="Price" type="text" id="Price" tabindex="4" placeholder="Price">
+                                </div>
+
+                                <div class="row">
+                                    <div class="label-left">Description</div>
+                                    <input name="Description" type="text" id="Description" tabindex="5" placeholder="Description">
+                                </div>
+
+                                <div class="row">
+                                    <div class="rowButton">
+                                        <input name="CoverPicture" type="file" id="addCoverPicBtn" tabindex="6" value="Add Cover Picture"></button>
+
+                                    </div>
+
+                                    <div class="rowButton">
+                                        <input name="PNGPicture" type="file" id="addPngPicBtn" tabindex="7" value="Add PNG Picture">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="rightContainer">
+                                <div class="imgContainer">
+                                    <div class="row">
+                                        <div class="label-left">Cover Picture</div>
+                                        <img class="CoverPicture" src="" id="CoverPicture">
+                                    </div>
+                                    <div class="row">
+                                        <div class="label-left">PNG Picture</div>
+                                        <img class="PNGPicture" src="" id="PNGPicture">
+                                    </div>
+                                </div>
+                                <div class="rowButton">
+                                    <input name="addProduct" type="button" id="addProduct" tabindex="8" value="Add Product" onclick="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="bdcProDelUpp bdc">
+                        <div class="addText" id="updateDeleteProduct">Update/Delete Product</div>
+                        <div class="columnContainer">
+                            <div class="columnMain">
+                                <div class="columnMainText cmtProductID">ProdID</div>
+                                <div class="columnMainText cmtCategoryID">CatID</div>
+                                <div class="columnMainText cmtProductName">ProductName</div>
+                                <div class="columnMainText cmtUnitInStock">Quantity</div>
+                                <div class="columnMainText cmtPrice">Price</div>
+                                <div class="columnMainText cmtUpdate">update</div>
+                                <div class="columnMainText cmtDelete">Delete</div>
+                            </div>
+                        </div>
+                        <div class="editProductContainer">
+                            <div style="font-size: 18px;">Update UnitInStock</div>
+                            <input type="text" name="UnitInStockText" value="" class="editProductText">
+                        </div>
+                    </div>
+
+
+                    <div class="bdcUseAdd bdc">
+                        <div class="addText">Customer Newsletters Active</div>
+                        <div class="columnContainer">
+                            <div class="columnMain">
+                                <div class="columnMainText NewsletterID">NewsletterID</div>
+                                <div class="columnMainText UserIDNewsletters">UserID</div>
+                                <div class="columnMainText FirstName">FirstName</div>
+                                <div class="columnMainText LastName">LastName</div>
+                                <div class="columnMainText Email">Email</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bdcOrdSend bdc">
+                        <div class="addText">List Of Orders</div>
+                        <div class="columnContainer">
+                            <div class="columnMain">
+                                <div class="columnMainText OrderID">OrderID</div>
+                                <div class="columnMainText OrderDate">OrderDate</div>
+                                <div class="columnMainText UserIDOrders">UserID</div>
+                                <div class="columnMainText ShipperID">ShipperID</div>
+                                <div class="columnMainText Recieved">Recieved</div>
+                                <div class="columnMainText Shipped">Shipped</div>
+                                <div class="columnMainText Send">Send</div>
+                                <div class="columnMainText Show">Show</div>
+                            </div>
+                        </div>
+
+                        <div class="addText">Order Details</div>
+                        <div class="columnContainerD">
+                            <div class="columnMain">
+                                <div class="columnMainText columnMainTextD ProductIDT">ProductID</div>
+                                <div class="columnMainText columnMainTextD QuantityT">Quantity</div>
+                                <div class="columnMainText columnMainTextD UnitPriceT">UnitPrice</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bdcMangeAdminAdd bdc">
+                        <div class="addText">Manege Admin</div>
+                        <div class="columnContainer">
+                            <div class="columnMain">
+                                <div class="columnMainText UserID">UserID</div>
+                                <div class="columnMainText FirstName">FirstName</div>
+                                <div class="columnMainText LastName">LastName</div>
+                                <div class="columnMainText Email">Email</div>
+                                <div class="columnMainText Role">Role</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+<script src="./JS/adminJS.js"></script>
+
+</html>
