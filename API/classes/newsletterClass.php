@@ -29,22 +29,7 @@ class Newsletter {
         $result =$this->db->runQuery($query, $value);
         return $result;
     }
-    public function update() {         
-        $query = "UPDATE newsletter SET NewsletterID = :NewsletterID, UserID = :UserID, FirstName = :FirstName,
-        LastName = :LastName, Email = :Email
-        WHERE NewsletterID = :NewsletterID;";
-        $value = array(":NewsletterID"=>$this->NewsletterID, ":UserID"=>$this->UserID, ":FirstName"=>$this->FirstName,
-        ":LastName"=>$this->LastName, ":Email"=>$this->Email);
-        $result =$this->db->runQuery($query, $value);
-        return $result;
-    }
-    public function delete() {
-        $query = "DELETE FROM newsletter
-        WHERE NewsletterID = :NewsletterID;";
-        $value = array(":NewsletterID"=>$this->NewsletterID);
-        $result =$this->db->runQuery($query);
-        return $result;
-    }
+    
     public function flexFunction($flexQuery, $flexArray = null) {
         return $this->db->runQuery($flexQuery, $flexArray);
     }
