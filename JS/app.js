@@ -275,8 +275,6 @@ $(document).ready(function() {
     }
 
 
-
-
     function deleteProduct(productID) {
         let myData = new FormData();
         myData.append("entity", "enjoy");

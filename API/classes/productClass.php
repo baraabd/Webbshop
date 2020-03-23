@@ -1,8 +1,8 @@
 <?php
-include("../classes/dbClass.php");
+require_once(realpath(dirname(__FILE__)."/dbClass.php"));
 
 class Product {
-    public $productID;
+    public $ProductID;
     public $CategoryID;
     public $ProductName;
     public $UnitInStock;
@@ -13,9 +13,9 @@ class Product {
     public $db;
 
     
-    function __construct($productID = null, $CategoryID = null, $ProductName = null, $UnitInStock = null,
+    function __construct($ProductID = null, $CategoryID = null, $ProductName = null, $UnitInStock = null,
     $Price = null, $CoverPicture = null, $PNGPicture = null, $Description = null) {
-        $this->productID= $productID;
+        $this->ProductID= $ProductID;
         $this->CategoryID = $CategoryID;
         $this->ProductName = $ProductName;
         $this->UnitInStock = $UnitInStock;
@@ -65,19 +65,16 @@ class Product {
 
         $value = array(":CategoryID"=>$this->CategoryID, ":ProductName"=>$this->ProductName, ":UnitInStock"=>$this->UnitInStock,
         ":Price"=>$this->Price, ":CoverPicture"=>$this->CoverPicture, ":PNGPicture"=>$this->PNGPicture, ":Description"=>$this->Description,
-        ":ProductID"=>$this->productID);
+        ":ProductID"=>$this->ProductID);
 
         $result =$this->db->runQuery($query, $value);        
         return $result;        
     }
 
 
-    
-
-
     public function delete() {
-        $query = "DELETE FROM products WHERE ProductID = :productID;";
-        $value = array(":productID"=>$this->productID);
+        $query = "DELETE FROM products WHERE ProductID = :ProductID;";
+        $value = array(":ProductID"=>$this->ProductID);
         $result =$this->db->runQuery($query, $value);
         return $result;
     }
