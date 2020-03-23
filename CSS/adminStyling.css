@@ -172,7 +172,7 @@
     }
     
     .bodyRight {
-        width: 84.5%;
+        width: 89%;
         background-color: #cccccc;
         margin: 10px;
         border-radius: 5px;
@@ -646,10 +646,33 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: deepskyblue;
         padding: 10px;
         height: 100%;
         width: 100%;
+    }
+    
+    .rowContainer.less {
+        background-color: deepskyblue;
+    }
+    
+    .rowContainer.numOfPro {
+        background-color: darkturquoise;
+    }
+    
+    .rowContainer.numOfCat {
+        background-color: deeppink;
+    }
+    
+    .rowContainer.numOfOrdSh {
+        background-color: lightgreen;
+    }
+    
+    .rowContainer.numOfOrdPen {
+        background-color: orchid;
+    }
+    
+    .rowContainer.numOfUseer {
+        background-color: lightslategrey;
     }
     
     .viewMore {

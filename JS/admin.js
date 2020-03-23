@@ -1,9 +1,47 @@
 import { makeRequest } from './requestHandler.js'
 
 
+
 $(document).ready(function() {
     var imgCover, imgPng
 
+    window.onload = init()
+
+    function init() {
+        $(".bdcDashBord").show(200);
+        $(".bdcCatAdd").hide(200);
+        $(".bdcCatDelUpp").hide(200);
+        $(".bdcProAdd").hide(200);
+        $(".bdcProDelUpp").hide(200);
+        $(".bdcUseAdd").hide(200);
+        $(".bdcUseDelUpp").hide(200);
+        $(".bdcOrdSend").hide(200);
+        $(".bdcMangeAdminAdd").hide(200);
+        $(".bdcMangeAdminDelUpp").hide(200);
+        dashBoard();
+        checkInloggedUser()
+    }
+
+
+    function checkInloggedUser() {
+        makeRequest("./../API/recivers/userReciver.php", "GET", null, (result) => {
+            console.log(result)
+            let userName = result
+            let welcomeText = document.getElementById("adminName")
+            if (sessionStorage.inloggedUserId && sessionStorage.inloggedUserId != "") {
+                welcomeText.innerText = userName
+            }
+            if (!sessionStorage.inloggedUserId && sessionStorage.inloggedUserId != "") {
+                welcomeText.innerText = ""
+            }
+        })
+    }
+
+
+    $('#logout').click(function() {
+        window.location.pathname = 'start.html';
+        session_unset();
+    });
 
     $('.categoriesContainer').click(function() {
 
@@ -65,55 +103,7 @@ $(document).ready(function() {
         $(".bdcMangeAdminAdd").hide(200);
         $(".bdcMangeAdminDelUpp").hide(200);
 
-        /**/
-
-        makeRequest("./../API/recivers/productReciver.php", "GET", null, (result) => {
-            console.log(result);
-            $("#numberOfProducts").text(result.length);
-        });
-
-
-        makeRequest("./../API/recivers/categoryReciver.php", "GET", null, (result) => {
-            console.log(result);
-            $("#numberOfCategory").text(result.length);
-        });
-
-        let myData = new FormData();
-        myData.append("entity", "enjoy");
-        myData.append("endpoint", "getAllProductLess");
-        makeRequest("./../API/recivers/productReciver.php", "POST", myData, (result) => {
-            console.log(result);
-            $("#numberOfLessProducts").text(result.length);
-        });
-
-
-
-        let myData1 = new FormData();
-        myData1.append("entity", "enjoy");
-        myData1.append("endpoint", "getAllorderShiped");
-        makeRequest("./../API/recivers/orderReciver.php", "POST", myData1, (result) => {
-            console.log(result);
-            $("#numberOfOrderShipped").text(result[0].count);
-        });
-
-        let myData2 = new FormData();
-        myData2.append("entity", "enjoy");
-        myData2.append("endpoint", "getAllorderBinding");
-        makeRequest("./../API/recivers/orderReciver.php", "POST", myData2, (result) => {
-            console.log(result);
-            $("#numberOfOrderPending").text(result[0].count);
-        });
-
-
-        let myData3 = new FormData();
-        myData3.append("entity", "enjoy");
-        myData3.append("endpoint", "getCountUsersWantAdmin");
-        makeRequest("./../API/recivers/userReciver.php", "POST", myData3, (result) => {
-            console.log(result);
-            $("#numberOfUserWantAdmin").text(result[0].count);
-        });
-
-
+        dashBoard()
     });
 
     $('.catAdd').click(function() {
@@ -861,6 +851,51 @@ $(document).ready(function() {
                 $(".columnContainerD").append(columnSubD);
             }
         })
+    }
+
+
+    function dashBoard() {
+        makeRequest("./../API/recivers/productReciver.php", "GET", null, (result) => {
+            console.log(result);
+            $("#numberOfProducts").text(result.length);
+        });
+
+        makeRequest("./../API/recivers/categoryReciver.php", "GET", null, (result) => {
+            console.log(result);
+            $("#numberOfCategory").text(result.length);
+        });
+
+        let myData = new FormData();
+        myData.append("entity", "enjoy");
+        myData.append("endpoint", "getAllProductLess");
+        makeRequest("./../API/recivers/productReciver.php", "POST", myData, (result) => {
+            console.log(result);
+            $("#numberOfLessProducts").text(result.length);
+        });
+
+        let myData1 = new FormData();
+        myData1.append("entity", "enjoy");
+        myData1.append("endpoint", "getAllorderShiped");
+        makeRequest("./../API/recivers/orderReciver.php", "POST", myData1, (result) => {
+            console.log(result);
+            $("#numberOfOrderShipped").text(result[0].count);
+        });
+
+        let myData2 = new FormData();
+        myData2.append("entity", "enjoy");
+        myData2.append("endpoint", "getAllorderBinding");
+        makeRequest("./../API/recivers/orderReciver.php", "POST", myData2, (result) => {
+            console.log(result);
+            $("#numberOfOrderPending").text(result[0].count);
+        });
+
+        let myData3 = new FormData();
+        myData3.append("entity", "enjoy");
+        myData3.append("endpoint", "getCountUsersWantAdmin");
+        makeRequest("./../API/recivers/userReciver.php", "POST", myData3, (result) => {
+            console.log(result);
+            $("#numberOfUserWantAdmin").text(result[0].count);
+        });
     }
 
 });
