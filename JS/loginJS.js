@@ -3,6 +3,7 @@ import { makeRequest } from "./requestHandler.js"
 
 
 export function login() {
+    alert("fdsfsd")
     let userName = document.getElementById("username").value
     let password = document.getElementById("password").value
 
