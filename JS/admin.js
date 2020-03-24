@@ -482,16 +482,18 @@ $(document).ready(function() {
         });
     }
 
+
     function activeAdmin(UserID, FirstName, LastName, Email, Password) {
         let myData = new FormData();
         myData.append("entity", "enjoy")
-        myData.append("endpoint", "activeAdmin")
+        myData.append("endpoint", "updateActiveAdmin")
         myData.append("UserID", UserID)
         myData.append("FirstName", FirstName)
         myData.append("LastName", LastName)
         myData.append("Email", Email)
         myData.append("Password", Password)
         myData.append("Role", "Admin")
+        myData.append("Active", "1")
         makeRequest("./../API/recivers/userReciver.php", "POST", myData, (result) => {
             if (result) {
                 $(".message").text("The user became a Admin");
@@ -787,7 +789,6 @@ $(document).ready(function() {
                 let Email = $("<div></div>");
                 Email.text(result[i].Email);
                 Email.addClass("ColumnSubText Email");
-
 
                 let Role = $("<div></div>");
                 Role.text(result[i].Role);

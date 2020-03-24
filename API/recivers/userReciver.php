@@ -36,14 +36,15 @@ try {
                 $result = getAllUsersWantAdmin();
                 echo json_encode($result);
 
-            } else if ($_POST["endpoint"] == "activeAdmin") {                 
+            } else if ($_POST["endpoint"] == "updateActiveAdmin") {                 
                 $result = activeUserAdmin(
-                $_POST['UserID12'],
-                $_POST['FirstName12'],
-                $_POST['LastName12'],
-                $_POST['Email12'],
-                $_POST['Password12'],
-                $_POST['Role12']
+                $_POST['UserID'],
+                $_POST['FirstName'],
+                $_POST['LastName'],
+                $_POST['Email'],
+                $_POST['Password'],
+                $_POST['Role'],
+                $_POST['Active']
                 );
                 echo json_encode($result);  
 

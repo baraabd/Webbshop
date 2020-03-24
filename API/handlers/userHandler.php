@@ -1,11 +1,10 @@
 <?php
 
-session_start();
 include("./../classes/userClass.php");
 
 function signUpSubmit($firstname, $lastname, $email, $password, $role)
 {
-    $user = new User(null, $firstname, $lastname, $email, $password, $role);
+    $user = new User(null, $firstname, $lastname, $email, $password, $role, null);
     $result = $user->insert();
     return "done";
 
@@ -52,8 +51,8 @@ function getCountUsersWantAdmin()
     return $result;
 };
 
-function activeUserAdmin($userId, $firstName, $lastName, $email, $password, $role) {   
-    $User = new User($userId, $firstName, $lastName, $email, $password, $role);
+function activeUserAdmin($userId, $firstName, $lastName, $email, $password, $role, $active) {   
+    $User = new User($userId, $firstName, $lastName, $email, $password, $role, $active);
     
     $result = $User->update();  
 
