@@ -19,23 +19,10 @@ $(document).ready(function() {
         $(".bdcMangeAdminAdd").hide(200);
         $(".bdcMangeAdminDelUpp").hide(200);
         dashBoard();
-        checkInloggedUser()
-    }
 
-    function checkInloggedUser() {
-        makeRequest("./../API/recivers/userReciver.php", "GET", null, (result) => {
-            console.log(result)
-            let userName = result
-            let welcomeText = document.getElementById("adminName")
-            if (sessionStorage.inloggedUserId && sessionStorage.inloggedUserId != "") {
-                welcomeText.innerText = userName
-            }
-            if (!sessionStorage.inloggedUserId && sessionStorage.inloggedUserId != "") {
-                welcomeText.innerText = ""
-            }
-        })
-    }
+        $('#adminName').text(sessionStorage.getItem("adminName"));
 
+    }
 
     $('#logout').click(function() {
         window.location.pathname = 'start.html';
