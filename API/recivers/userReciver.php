@@ -19,7 +19,7 @@ try {
                     $_POST['lastname'],
                     $_POST['email'],
                     $hash,
-                    $_POST['role']
+                    $_POST['role']                    
                 );
                 echo json_encode($result);
             } else if($_POST["endpoint"] == "loginUser") {

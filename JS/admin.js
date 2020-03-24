@@ -22,7 +22,6 @@ $(document).ready(function() {
         checkInloggedUser()
     }
 
-
     function checkInloggedUser() {
         makeRequest("./../API/recivers/userReciver.php", "GET", null, (result) => {
             console.log(result)
@@ -408,7 +407,6 @@ $(document).ready(function() {
         })
     }
 
-
     function deleteCategory(CategoryID) {
         let myData = new FormData();
         myData.append("entity", "enjoy");
@@ -418,7 +416,6 @@ $(document).ready(function() {
             console.log(result);
         });
     }
-
 
     $('.AddAdminCategory').click(function() {
 
