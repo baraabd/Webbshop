@@ -17,7 +17,7 @@ export function login() {
             sessionStorage.setItem("inloggedUserId", result.inloggedUserId)
 
             // Admin ansvar har läg till den har koden för att gå till admin sida
-            if (result[0].Role == "Admin" || result[0].Active == 1) {
+            if (result[0].Role == "Admin" && result[0].Active == 1) {
 
                 sessionStorage.setItem("adminName", result.FirstName)
                 window.location.pathname = 'admin.html';

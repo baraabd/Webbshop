@@ -25,8 +25,9 @@ $(document).ready(function() {
     }
 
     $('#logout').click(function() {
+        sessionStorage.clear();
         window.location.pathname = 'start.html';
-        session_unset();
+
     });
 
     $('.categoriesContainer').click(function() {
