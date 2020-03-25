@@ -14,7 +14,7 @@ ADMIN- delen: Se: Uppdaterad Gruppkontrakt.
 Jag använde Mediefrågor för att kontrollera saker, till exempel: (responsiv webbdesign) till stationära datorer, bärbara datorer, surfplattor och mobiltelefoner.
 
 
-• Man ska kunna registrera sig som administratör på sidan, nya användare ska sparas i databasen. Har jag uppfyllt kravet: Ja, Hur har Jag uppfyllt kravet: Genum en function som heter signUpSubmit(event) (signupJS.js rad 8 ), Det här funktionen är tillåt användare som kan registrera som  kunder eller admin, och  admin väntar på aktivering från en tidigare admin.
+• Man ska kunna registrera sig som administratör på sidan, nya användare ska sparas i databasen. Har jag uppfyllt kravet: Ja, Hur har Jag uppfyllt kravet: Genum en function som heter signUpSubmit(event) (signupJS.js rad 8 ), Det här funktionen är tillåt användare som kan registreras sig som  kund eller admin, och admin väntar på aktivering av en tidigare admin.
 
 • Man ska kunna logga in som administratör i systemet. Har jag uppfyllt kravet: Ja, Hur har jag uppfyllt kravet: Genum en function som heter login() (loginJS.js rad 03), Det finns IF statement, som tar resultaten från funktionen , om resultatet är identiskt, kommer det att gå till den Admin sidan.
 
