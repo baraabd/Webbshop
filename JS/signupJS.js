@@ -8,6 +8,7 @@ function addEventListeners() {
 
 
 $(document).ready(function() {
+
     $('#my_radio_box').change(function() {
         selected_value = $("input[name='role']:checked").val();
     });
