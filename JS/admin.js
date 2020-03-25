@@ -418,7 +418,7 @@ $(document).ready(function() {
                 $(".message").css('color', 'blue');
                 $('#message').fadeIn(1000);
                 $('#message').fadeOut(1000);
-                $('#CategoryName').text("");
+                $('#CategoryName').val("");
             }
             console.log(result);
         });
