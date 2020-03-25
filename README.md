@@ -10,7 +10,7 @@ ADMIN- delen: Se: Uppdaterad Gruppkontrakt.
 
 ِADMIN
 
-• Alla sidor skall vara responsiva. Har jag uppfyllt kravet: Ja, Hur har Jag uppfyllt kravet: Genum css fil som heter (adminStyling.css), där använder jag (@media), och  målet med att använda det regel för att används i mediefrågor för att tillämpa olika stilar för olika mediatyper / enheter.
+• Admin sidor skall vara responsiva. Har jag uppfyllt kravet: Ja, Hur har Jag uppfyllt kravet: Genum css fil som heter (adminStyling.css), där använder jag (@media), och  målet med att använda det regel för att används i mediefrågor för att tillämpa olika stilar för olika mediatyper / enheter.
 Jag använde Mediefrågor för att kontrollera saker, till exempel: (responsiv webbdesign) till stationära datorer, bärbara datorer, surfplattor och mobiltelefoner.
 
 
