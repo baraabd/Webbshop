@@ -28,6 +28,12 @@ try {
                 $_POST['password']);
                 echo json_encode($result);
 
+            } else if($_POST["endpoint"] == "loginAdmin") {
+                $result = loginAdmin(
+                $_POST['userName'],
+                $_POST['password']);
+                echo json_encode($result);
+
             } else if ($_POST["endpoint"] == "getCountUsersWantAdmin") {
                 $result = getCountUsersWantAdmin();
                 echo json_encode($result);

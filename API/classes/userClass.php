@@ -25,6 +25,7 @@ include(realpath(dirname(__FILE__)."/dbClass.php"));
     
     
     public function fetchAll() {
+         // todo: ta bort password
         $query = "SELECT * FROM Users;";
         $result = $this->db->runQuery($query);
         return $result;
@@ -35,7 +36,13 @@ include(realpath(dirname(__FILE__)."/dbClass.php"));
         return $this->db->runQuery($query);
     }
     
+    public function getAdminLogin() {         
+        $query = "SELECT * FROM users WHERE Email = :Email AND Password = :Password ;";
+        $value = array(":Email"=>$this->email,":Password"=>$this->password);        
+        $result =$this->db->runQuery($query, $value);                   
+        return $result;
 
+    }
     public function getAllUsersWantAdmin() {
         $query = "SELECT * FROM users WHERE Role LIKE 'Admin' AND Active is NULL;";
         return $this->db->runQuery($query);

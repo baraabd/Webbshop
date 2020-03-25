@@ -39,6 +39,17 @@ function loginUser($email, $password) {
 
     return "Wrong Username or passwords";
 }
+function loginAdmin($email, $password) {
+    $User = new User(null, null, null, $email, $password, null, null);
+    $result = $User->getAdminLogin();
+    if (empty($result)) {
+        throw new Exception("No user found", 404);
+        exit;
+    }
+    return $result;
+};
+
+
 
 function getCountUsersWantAdmin()
 {
