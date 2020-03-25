@@ -1,12 +1,20 @@
 import { makeRequest } from "./requestHandler.js"
+var selected_value
 
 function addEventListeners() {
     const signup = document.getElementById("signUpSubmit")
     signup && signup.addEventListener("click", signUpSubmit)
 }
 
-export function signUpSubmit(event) {
 
+$(document).ready(function() {
+    $('#my_radio_box').change(function() {
+        selected_value = $("input[name='role']:checked").val();
+    });
+});
+
+
+export function signUpSubmit(event) {
     var myData = new FormData();
     myData.append("entity", "enjoy");
     myData.append("endpoint", "addUser");
@@ -14,7 +22,7 @@ export function signUpSubmit(event) {
     myData.append("lastname", document.querySelector('input[name=lastname]').value)
     myData.append("email", document.querySelector('input[name=email]').value)
     myData.append("password", document.querySelector('input[name=userPwdInput]').value)
-    myData.append("role", document.querySelector('input[name=role]').value)
+    myData.append("role", selected_value)
     myData.append("active", "0")
 
     makeRequest("./../API/recivers/userReciver.php", "POST", myData, (result) => {
