@@ -13,13 +13,14 @@ try {
     else if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST["entity"] == "enjoy") {            
             if ($_POST["endpoint"] == "addUser") {
-                $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                //$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $result = signUpSubmit(
                     $_POST['firstname'],
                     $_POST['lastname'],
                     $_POST['email'],
-                    $hash,
-                    $_POST['role']                    
+                    $_POST['password'],                    
+                    $_POST['role'],
+                    $_POST['active']                                
                 );
                 echo json_encode($result);
             } else if($_POST["endpoint"] == "loginUser") {

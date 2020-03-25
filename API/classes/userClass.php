@@ -32,7 +32,7 @@ include(realpath(dirname(__FILE__)."/dbClass.php"));
     }
 
     public function countUsersWantAdmin() {
-        $query = "SELECT count(*) AS count FROM users WHERE Role LIKE 'Admin' AND Active is NULL ;";
+        $query = "SELECT count(*) AS count FROM users WHERE Role LIKE 'Admin' AND Active = 0 ;";
         return $this->db->runQuery($query);
     }
     
@@ -44,7 +44,7 @@ include(realpath(dirname(__FILE__)."/dbClass.php"));
 
     }
     public function getAllUsersWantAdmin() {
-        $query = "SELECT * FROM users WHERE Role LIKE 'Admin' AND Active is NULL;";
+        $query = "SELECT * FROM users WHERE Role LIKE 'Admin' AND Active = 0;";
         return $this->db->runQuery($query);
     }
 

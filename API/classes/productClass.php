@@ -33,7 +33,7 @@ class Product {
     }
 
     public function fetchAllProductLess() {
-        $query = "SELECT count(*) AS count FROM Products WHERE UnitInStock < 10 ;";
+        $query = "SELECT * FROM Products WHERE  UnitInStock <= '10';";
         return $this->db->runQuery($query);
     }
 

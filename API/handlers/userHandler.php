@@ -2,18 +2,22 @@
 
 include("./../classes/userClass.php");
 
-function signUpSubmit($firstname, $lastname, $email, $password, $role)
+function signUpSubmit($firstName, $lastName, $email, $password, $role, $active )
 {
-    $user = new User(null, $firstname, $lastname, $email, $password, $role, null);
+    $user = new User(null, $firstName, $lastName, $email, $password, $role, $active);
     $result = $user->insert();
-    return "done";
-
     if (empty($result)) {
+        throw new Exception("No user found", 404);
+        exit;
+    }    
+    return $result;   
+
+    /* if (empty($result)) {
         throw new Exception("No user found", 404);
         exit;
     }
     
-    return "no data was sent";
+    return "no data was sent"; */
 };
 
 
