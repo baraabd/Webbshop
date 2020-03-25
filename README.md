@@ -1,8 +1,14 @@
 # Webbshop
 En objekt-orienterad back-end webbshop applikation i PHP som är kopplad till en MySQL databas. Backend skall innehålla ett API som skall användas för kommunikationen med databasen.
 
+Team 2: Enjoy Medlemmar: Anu, Bara, Essa, Rasmus och Yanica Lite info: Tillgång till MAMP server och MySQL server, importera vår databas, enjoy.sql filen som är bifogad i inlämningen. Inga inloggningsuppgifter behövs, skapar ditt eget lösenord eller alternativt lösenordet som du får från cartsidan när du gör beställning utan att vara användare. Du hänvisas vidare med hjälp av alert på sidorna. Iconer och Enjoy-loggan länkar till olika sidor.
+
+OBS: Readme filen ska framförallt innehålla en lista över alla kraven i kravspecen nedanför samt en kort kommentar från er - har ni uppfyllt kravet? I så fall, hur?
+
 
 ADMIN- delen: Se: Uppdaterad Gruppkontrakt. 
+
+ِADMIN
 
 • Man ska kunna registrera sig som administratör på sidan, nya användare ska sparas i databasen. Har jag uppfyllt kravet: Ja, Hur har Jag uppfyllt kravet: Genum en function som heter signUpSubmit(event) (signupJS.js rad 8 ), Det här funktionen är tillåt användare som kan registrera som  kunder eller admin, och  admin väntar på aktivering från en tidigare admin.
 
