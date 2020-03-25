@@ -11,8 +11,7 @@ function getAllCategories() {
 function getIdCategory($CategoryName)
 {
     $category = new Category(null, $CategoryName);
-    $result = $category->fetchOne();
-    error_log("fetchOne");
+    $result = $category->fetchOne();   
     if (empty($result)) {
         throw new Exception("No Category found", 404);
         exit;

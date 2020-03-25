@@ -18,12 +18,10 @@ class Category {
         return $result;        
     }
 
-    public function fetchOne() {
-        error_log("fetchOneClass");
+    public function fetchOne() {        
         $query = "SELECT CategoryID FROM categories WHERE CategoryName = :CategoryName;";
         $value = array(":CategoryName"=>$this->CategoryName);
-        $result =$this->db->runQuery($query, $value);
-        error_log("fetchOneClassBeforeResult");
+        $result =$this->db->runQuery($query, $value);        
         return $result;        
     }
     

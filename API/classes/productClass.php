@@ -37,12 +37,10 @@ class Product {
         return $this->db->runQuery($query);
     }
 
-    public function fetchOne() {
-        error_log("fetchOneClass");
+    public function fetchOne() {       
         $query = "SELECT ProductID FROM products WHERE ProductName = :ProductName;";
         $value = array(":ProductName"=>$this->ProductName);
-        $result =$this->db->runQuery($query, $value);
-        error_log("fetchOneClassBeforeResult");
+        $result =$this->db->runQuery($query, $value);       
         return $result;        
     }
 

@@ -137,9 +137,6 @@ $(document).ready(function() {
         $(".bdcMangeAdminAdd").hide(200);
         $(".bdcMangeAdminDelUpp").hide(200);
 
-
-
-
         $(function() {
 
             makeRequest("./../API/recivers/categoryReciver.php", "GET", null, (result) => {
@@ -170,7 +167,6 @@ $(document).ready(function() {
         $(".bdcOrdSend").hide(200);
         $(".bdcMangeAdminAdd").hide(200);
         $(".bdcMangeAdminDelUpp").hide(200);
-
 
         getAllProducts()
     });
@@ -262,7 +258,6 @@ $(document).ready(function() {
         });
     }
 
-
     $('.usersAdd').click(function() {
         $(".bdcDashBord").hide(200);
         $(".bdcCatAdd").hide(200);
@@ -320,8 +315,8 @@ $(document).ready(function() {
         $(".bdcOrdSend").hide(200);
         $(".bdcMangeAdminAdd").show(200);
         $(".bdcMangeAdminDelUpp").hide(200);
-        showUsersAdmin();
 
+        showUsersAdmin();
     });
 
     $('.mangeAdminDelUpp').click(function() {
@@ -406,7 +401,6 @@ $(document).ready(function() {
     }
 
     $('.AddAdminCategory').click(function() {
-
         let myData = new FormData();
         myData.append("entity", "enjoy");
         myData.append("endpoint", "addAdminCategory");
@@ -437,7 +431,7 @@ $(document).ready(function() {
                 $(".message").css('color', 'blue');
                 $('#message').fadeIn(1000);
                 $('#message').fadeOut(1000);
-                $('#CategoryName').text("");
+                $('#CategoryName').val("");
             }
             console.log(result);
 
@@ -508,6 +502,7 @@ $(document).ready(function() {
             if (result) {
                 $(".message").text("The product was updated successfully");
                 $(".message").css('color', 'blue');
+                $('#editProductText').val("");
 
             }
             console.log(result);
@@ -602,9 +597,6 @@ $(document).ready(function() {
             myData3.append("ProductName", document.querySelector('input[name=ProductName]').value)
             makeRequest("./../API/recivers/productReciver.php", "POST", myData3, (getProductId) => {
                 console.log(getProductId);
-
-                alert(getProductId[0].ProductID);
-
 
                 let myData4 = new FormData();
                 myData4.append("entity", "enjoy");

@@ -39,8 +39,7 @@ try {
             } else if ($_POST["endpoint"] == "getAllProducts") {
                 $result = getProducts();
                 echo json_encode($result);
-            } else if ($_POST["endpoint"] == "getIdProduct") {
-                error_log("endpointGetIdProduct");
+            } else if ($_POST["endpoint"] == "getIdProduct") {               
                 $result = getIdProduct(
                     $_POST['ProductName']
                 );
@@ -48,8 +47,7 @@ try {
             } else if ($_POST["endpoint"] == "getAllProductLess") {
                 $result = getAllProductLess();
                 echo json_encode($result);
-            } else if ($_POST["endpoint"] == "updateAdminProduct") {
-                error_log("updatebeforeProduct");
+            } else if ($_POST["endpoint"] == "updateAdminProduct") {               
                 $result = updateProduct(
                     $_POST['ProductID'],
                     $_POST['CategoryID'],
@@ -59,8 +57,7 @@ try {
                     $_POST['CoverPicture'],
                     $_POST['PNGPicture'],
                     $_POST['Description']
-                );
-                error_log("updateEfterProduct");
+                );                
                 echo json_encode($result);
             } else {
                 throw new Exception("Not a valid endpoint", 501);

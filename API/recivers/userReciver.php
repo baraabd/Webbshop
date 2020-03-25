@@ -13,12 +13,12 @@ try {
     else if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST["entity"] == "enjoy") {            
             if ($_POST["endpoint"] == "addUser") {
-                //$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                //$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                
                 $result = signUpSubmit(
                     $_POST['firstname'],
                     $_POST['lastname'],
                     $_POST['email'],
-                    $_POST['password'],                    
+                    $_POST['password'],                   
                     $_POST['role'],
                     $_POST['active']                                
                 );

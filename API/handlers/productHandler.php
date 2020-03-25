@@ -30,8 +30,7 @@ function getPCProducts() {
 function getIdProduct($ProductName)
 {
     $Products = new Product(null, null, $ProductName, null, null, null, null, null);
-    $result = $Products->fetchOne();
-    error_log("fetchOne");
+    $result = $Products->fetchOne();   
     if (empty($result)) {
         throw new Exception("No Product found", 404);
         exit;

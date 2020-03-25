@@ -7,13 +7,9 @@ try {
         $result = getAllCategories();
         echo json_encode($result);
         
-    } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        error_log("POST");
+    } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {       
         if ($_POST["entity"] == "enjoy") {
-            error_log("entity");
-
-            if ($_POST["endpoint"] == "getIdCategory") {
-                error_log("endpointGetIdCategory");
+            if ($_POST["endpoint"] == "getIdCategory") {             
                 $result = getIdCategory(
                     $_POST['CategoryName']
                 );
